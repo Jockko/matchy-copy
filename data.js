@@ -11,20 +11,35 @@
 //////////////////////////////////////////////////////////////////////
 // Step 1 - Object Creation //////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
-
+var animal = {};
+//give animal a property name species using dot notation
+animal.species = "dog";
+animal["name"] = "Sasha";
+animal["noises"] = [];
+console.log(animal);
 
 //////////////////////////////////////////////////////////////////////
 // Step 2 - Array Creation ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
+var noises = [];
+//use bracket notation to give noises a sound that my animal makes
+noises[0] = "Woof";
+console.log(noises);
+//add 
+noises.push("Whine");
+//add another noise to the beginning using another method
+noises.unshift("Bark");
+noises[noises.length] = "Scratch";
 
 
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Combining Step 1 and 2 ///////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
-
+//use bracket syntax
+//assign the noises PROPERTY onto our noises array
+animal["noises"] = noises;
+animal.noises.push("snore");
+console.log(animal)
 
 /* *******************************************************************
  * Step 4 - Review
@@ -49,12 +64,32 @@
 // Step 6 - A Collection of Animals //////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+var animals = [];
+animals.push(animal);
+console.log(animals);
+
+var duck = { species: 'duck', name: 'Jerome', noises: ['quack', 'honk', 'sneeze', 'woosh'] };
+animals.push(duck);
+console.log(animals);
+
+var bird = {species: "Bird", name: "Jimmy", noises:["CawCaw", "Baaa"] };
+var tiger = {species: "Tiger", name: "Vince", noises: ["Roar", "Grrr"]};
+animals.push(bird, tiger);
+
 
 
 //////////////////////////////////////////////////////////////////////
 // Step 7 - Making Friends ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+//because arrays puts elements in an ordered list naturally
+var friends = [];
+//write a function called get random
+function getRandom(array){
+  for(var i = 0; i < array.length; i++){
+    return Math.floor(Math.random() * i)
 
+  }
+}
 
 
 /**
