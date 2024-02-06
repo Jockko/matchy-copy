@@ -88,12 +88,15 @@ function getRandom(array){
   return Math.floor(Math.random() * array.length);
 }
 
+//get a random index
 var randomIndex = getRandom(animals);
+//now get a random animal
 var randomAnimal = animals[randomIndex];
+//add that randomAnimal's name to the friends list
 friends.push(randomAnimal.name);
 console.log("Friends:" , friends);
-var chosenAnimalIndex = getRandom(animals);
-animals[chosenAnimalIndex]['friends'] = friends;
+//take a random index and assign the friends prop to our friends list
+animals[randomIndex]['friends'] = friends;
 
 /**
  * Nice work! You're done Part 1. Pat yourself on the back and
