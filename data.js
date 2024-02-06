@@ -85,12 +85,15 @@ animals.push(bird, tiger);
 var friends = [];
 //write a function called get random
 function getRandom(array){
-  for(var i = 0; i < array.length; i++){
-    return Math.floor(Math.random() * i)
-
-  }
+  return Math.floor(Math.random() * array.length);
 }
 
+var randomIndex = getRandom(animals);
+var randomAnimal = animals[randomIndex];
+friends.push(randomAnimal.name);
+console.log("Friends:" , friends);
+var chosenAnimalIndex = getRandom(animals);
+animals[chosenAnimalIndex]['friends'] = friends;
 
 /**
  * Nice work! You're done Part 1. Pat yourself on the back and
